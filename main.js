@@ -1,27 +1,51 @@
 $(document).ready(function() {
-      //check jquery
-      // $(".letter").click(function() {
-      //   alert("jquery working!")
-      // });
-      //create word bank
-    var wordsToChooseFrom = ["bologna", "cheese", "sandwich"];
 
-    //randomly select a word from word bank
-    var randNumber = Math.floor(Math.random()*wordsToChooseFrom.length);
-    var ourWord = wordsToChooseFrom[randNumber];
-    //alert(randNumber);
-    //alert(ourWord);
-    //create blanks for our word
-    //and append it to answer
+      //create word bank:
+    var wordsToChooseFrom = ["bologna", "cheese", "sandwich", "pizza", "barbeque"];
+
+    //randomly select a word from word bank:
+    var randomNumber = 0;
+    var chosenWord = '';
+    var ourWord = [];
+    var blankSpaces = [];
+    var indecesOfLetter = [];
+
+    //create blanks for our word:
     $("#startGame").click(function() {
-        var blankSpaces = "";
-        for(var i = 0; i < ourWord.length; i++) {
-        blankSpaces +="_";
+        randomNumber = Math.floor(Math.random()*wordsToChooseFrom.length);
+        chosenWord = wordsToChooseFrom[randomNumber];
+        console.log(ourWord);
+        for(var i =0; i < chosenWord.length; i++) {
+        ourWord.push(chosenWord[i]);
+        blankSpaces.push("_");
         }
-      alert(blankSpaces)
-      //var blanks = $('blankSpaces').html;
-      $(".answer").append(blankSpaces);
+        $(".answer").append(blankSpaces);
+        alert(ourWord);
+
     });
 
+    //when a button is clicked
+    $(".letter").click(function() {
+
+        var theLetter = this.innerHTML;
+        for(var i = 0;i < ourWord.length; i++) {
+            if (theLetter === ourWord[i]) {
+              //alert('yes!');
+              indecesOfLetter.push(i);
+          }
+
+            //else (alert('nope!'));
+    }
+console.log(indecesOfLetter);
+
+    //console.log([theLetter, indecesOfLetter]);
+        });
+
+
+
+        // alert(theLetter);
+        // alert(ourWord);
+        //alert(ourWord.indexof(theLetter));
 
 });
+
