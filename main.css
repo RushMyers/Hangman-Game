@@ -10,8 +10,8 @@ body {
   background-color: lightblue;
  }
  .answer {
-    font-size: 6em;
-    text-decoration: underline;
+    font-size: 3em;
+    letter-spacing: 2em;
   }
 
 

@@ -20,7 +20,7 @@ $(document).ready(function() {
         }
       alert(blankSpaces)
       //var blanks = $('blankSpaces').html;
-      $("#answer").append($(blankSpaces));
+      $(".answer").append(blankSpaces);
     });
 
 
