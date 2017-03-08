@@ -3,15 +3,26 @@ body {
  }
 .letter {
   display: inline-block;
-  height: 1em;
-  width: 1em;
+  height: .8em;
+  width: .8em;
   padding: 1em;
-  font-size: 3em;
+  font-size: 2.1em;
   background-color: lightblue;
  }
- .answer {
-    font-size: 3em;
-    letter-spacing: 2em;
+.answer {
+  font-size: 3em;
+  letter-spacing: 2em;
+
   }
+.alreadyGuessed {
+    background-color: pink;
+   }
 
-
+.lowerpart {
+    dispay.flex;
+   }
+.imagesw {
+    background-color: pink;
+    height: 400px;
+    width: 90px;
+ }

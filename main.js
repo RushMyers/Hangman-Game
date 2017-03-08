@@ -9,6 +9,8 @@ $(document).ready(function() {
     var ourWord = [];
     var blankSpaces = [];
     var indecesOfLetter = [];
+    var theLetter = '';
+    var arrayHolder = [];
 
     //create blanks for our word:
     $("#startGame").click(function() {
@@ -21,25 +23,42 @@ $(document).ready(function() {
         }
         $(".answer").append(blankSpaces);
         alert(ourWord);
-
     });
 
     //when a button is clicked
     $(".letter").click(function() {
-
-        var theLetter = this.innerHTML;
+        //add class to clicked button
+        $(this).addClass("alreadyGuessed");
+        theLetter = this.innerHTML;
         for(var i = 0;i < ourWord.length; i++) {
             if (theLetter === ourWord[i]) {
-              //alert('yes!');
-              indecesOfLetter.push(i);
+                blankSpaces[i] = theLetter;
+              }
           }
+        console.log(blankSpaces);
+        $('.answer').text(blankSpaces.join(''));
+      });
+          //     arrayHolder.push('_');
+          //   } else {
+          //     arrayHolder.push(theLetter);
+          //   }
+
+          //     newArray = blankSpaces;
+          //     //alert('yes!');
+          //     //indecesOfLetter.push(i);
+          //     }
+          //     console.log(arrayHolder);
+          //     blankSpaces = [];
+          //     $('.container').append(arrayHolder).class('answer');
+          //     console.log(blankSpaces);
 
             //else (alert('nope!'));
-    }
+
+
 console.log(indecesOfLetter);
 
     //console.log([theLetter, indecesOfLetter]);
-        });
+});
 
 
 
@@ -47,5 +66,5 @@ console.log(indecesOfLetter);
         // alert(ourWord);
         //alert(ourWord.indexof(theLetter));
 
-});
+
 
