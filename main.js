@@ -8,24 +8,35 @@ $(document).ready(function() {
     var chosenWord = '';
     var ourWord = [];
     var blankSpaces = [];
-    var indecesOfLetter = [];
+    //var indecesOfLetter = [];
     var theLetter = '';
-    var arrayHolder = [];
-
+    //var arrayHolder = [];
+    var wrongGuesses = [];
+    //var resetGame = function() {
+    //    blankSpaces = [];
+    //  }
     //create blanks for our word:
+    var resetGame = function() {
+          while(blankSpaces.length > 0) {
+          blankSpaces.pop();
+          $(".answer").innerHTML = 'please play again';
+          }
+        };
     $("#startGame").click(function() {
+        //resetGame();
         randomNumber = Math.floor(Math.random()*wordsToChooseFrom.length);
         chosenWord = wordsToChooseFrom[randomNumber];
         console.log(ourWord);
         for(var i =0; i < chosenWord.length; i++) {
         ourWord.push(chosenWord[i]);
-        blankSpaces.push("_");
+        //blankSpaces.push("_");
+        blankSpaces[i] = "_";
         }
         $(".answer").append(blankSpaces);
-        alert(ourWord);
-    });
+        alert(chosenWord);
+    })
 
-    //when a button is clicked
+        //when a button is clicked
     $(".letter").click(function() {
         //add class to clicked button
         $(this).addClass("alreadyGuessed");
@@ -35,36 +46,44 @@ $(document).ready(function() {
                 blankSpaces[i] = theLetter;
               }
           }
-        console.log(blankSpaces);
+        // if(ourWord.indexof(theLetter) === -1) {
+        //         wrongGuesses[0] += 1;
+        //       } else {
+        //         alert('uh oh')
+        //       }
+        //console.log(blankSpaces);
+
         $('.answer').text(blankSpaces.join(''));
-      });
-          //     arrayHolder.push('_');
-          //   } else {
-          //     arrayHolder.push(theLetter);
-          //   }
+        if (blankSpaces.indexOf("_") === -1) {
+        alert('Congratulations! You Won!!!');
+        resetGame();
+        //location.reload();
+        }
+        if (!(ourWord.indexOf(theLetter) > -1)) {
+              wrongGuesses.push('wrong');
+        }
+          //else {
+          //    alert('sweet!');
+          //}
+        console.log(wrongGuesses);
 
-          //     newArray = blankSpaces;
-          //     //alert('yes!');
-          //     //indecesOfLetter.push(i);
-          //     }
-          //     console.log(arrayHolder);
-          //     blankSpaces = [];
-          //     $('.container').append(arrayHolder).class('answer');
-          //     console.log(blankSpaces);
+        if (wrongGuesses.length === 6) {
+          alert("Sorry, you lost.");
+          resetGame();
+          }
+          //location.reload();
+          //console.log("");
 
-            //else (alert('nope!'));
+  })
+          //
+//         $('#reset').click(function() {
+//             while(blankSpaces.length > 0) {
+//               blankSpaces.pop();
+// }
+//         })
 
 
-console.log(indecesOfLetter);
-
-    //console.log([theLetter, indecesOfLetter]);
 });
-
-
-
-        // alert(theLetter);
-        // alert(ourWord);
-        //alert(ourWord.indexof(theLetter));
 
 
 

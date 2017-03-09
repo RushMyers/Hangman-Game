@@ -26,3 +26,13 @@ body {
     height: 400px;
     width: 90px;
  }
+ img {
+    height: 250px;
+
+  }
+
+ button {
+    background-color: lightblue;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+  }
