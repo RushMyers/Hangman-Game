@@ -19,7 +19,7 @@ $(document).ready(function() {
     var resetGame = function() {
           while(blankSpaces.length > 0) {
           blankSpaces.pop();
-          $(".answer").innerHTML = 'please play again';
+          $(".answer").text('please play again');
           }
         };
     $("#startGame").click(function() {
@@ -36,29 +36,23 @@ $(document).ready(function() {
         alert(chosenWord);
     })
 
-        //when a button is clicked
+        //when a letter is clicked
     $(".letter").click(function() {
-        //add class to clicked button
         $(this).addClass("alreadyGuessed");
         theLetter = this.innerHTML;
         for(var i = 0;i < ourWord.length; i++) {
             if (theLetter === ourWord[i]) {
                 blankSpaces[i] = theLetter;
+                $('.answer').text(blankSpaces.join(''));
+                if (blankSpaces.indexOf("_") === -1) {
+                    alert('Congratulations! You Won!!!');
+                    resetGame();
+                }
               }
           }
-        // if(ourWord.indexof(theLetter) === -1) {
-        //         wrongGuesses[0] += 1;
-        //       } else {
-        //         alert('uh oh')
-        //       }
-        //console.log(blankSpaces);
 
-        $('.answer').text(blankSpaces.join(''));
-        if (blankSpaces.indexOf("_") === -1) {
-        alert('Congratulations! You Won!!!');
-        resetGame();
         //location.reload();
-        }
+
         if (!(ourWord.indexOf(theLetter) > -1)) {
               wrongGuesses.push('wrong');
         }
