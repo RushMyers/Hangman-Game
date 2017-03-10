@@ -35,20 +35,36 @@
                 $(".letter").removeClass('alreadyGuessed');
           }
           $(".answer").text(blankSpaces.join(''));
+          $("#guessesLeftCounter").html(guessesLeft);
         };
 
-//                  startGame
-    $("#startGame").click(function() {
-        //resetGame();
-        randomNumber = Math.floor(Math.random()*wordsToChooseFrom.length);
-        chosenWord = wordsToChooseFrom[randomNumber];
-        for(var i =0; i < chosenWord.length; i++) {
-        ourWord.push(chosenWord[i]);
-        blankSpaces[i] = "_";
-        }
-        $(".answer").append(blankSpaces);
-        alert(chosenWord);
-    })
+//                  Game Setup
+        var gameStart = function() {
+            randomNumber = Math.floor(Math.random()*wordsToChooseFrom.length);
+            chosenWord = wordsToChooseFrom[randomNumber];
+            for(var i =0; i < chosenWord.length; i++) {
+            ourWord.push(chosenWord[i]);
+            blankSpaces[i] = "_";
+            }
+            $(".answer").append(blankSpaces);
+            alert(chosenWord);
+          }
+//                  Click New Game
+        $("#startGame").click(function() {
+            resetGame();
+            gameStart();
+        })
+    // $("#startGame").click(function() {
+    //     //resetGame();
+    //     randomNumber = Math.floor(Math.random()*wordsToChooseFrom.length);
+    //     chosenWord = wordsToChooseFrom[randomNumber];
+    //     for(var i =0; i < chosenWord.length; i++) {
+    //     ourWord.push(chosenWord[i]);
+    //     blankSpaces[i] = "_";
+    //     }
+    //     $(".answer").append(blankSpaces);
+    //     alert(chosenWord);
+    // })
 
 //              when a letter is clicked
     $(".letter").click(function() {
@@ -64,7 +80,7 @@
 //                    Win Game
                   if (blankSpaces.indexOf("_") === -1) {
                       alert('Congratulations! You Won!!!');
-                      resetGame();
+                      //resetGame();
                       addWonGame();
                       }
             }
@@ -78,7 +94,7 @@
 //                     Lose Game
                   if (wrongGuesses.length === 6) {
                       alert("Sorry, you lost.");
-                      resetGame();
+                      //resetGame();
                       addGameLost();
                       }
             }
