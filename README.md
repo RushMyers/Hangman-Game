@@ -5,7 +5,8 @@
 3. link to Trello Board
 4. Link to WireFrames or Mockups
 5. List of Technologies, libraries, or frameworks
-
+Link to My Site:
+[Frogman](file:///Users/Rush/ga/Hangman-Game/main.html)
 Description:
 
   For this project, I chose to make a hangman-style game.
@@ -37,10 +38,10 @@ Features:
   how many wrong guesses they have left before they lose the game
 
 Wireframe:
-![wireframe1](http://imgur.com/vCZkBk3)
-![wireframe2](http://imgur.com/mSN1Mmj)
-![wireframe3](http://imgur.com/mW8taSX)
-![wireframe4](http://imgur.com/EQV3HYx)
+[wireframe1](http://imgur.com/vCZkBk3)
+[wireframe2](http://imgur.com/mSN1Mmj)
+[wireframe3](http://imgur.com/mW8taSX)
+[wireframe4](http://imgur.com/EQV3HYx)
 
 Trello board:
 
