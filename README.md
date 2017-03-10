@@ -1,12 +1,7 @@
 # Hangman-Game
 
-1. project description
-2. link to deployed app
-3. link to Trello Board
-4. Link to WireFrames or Mockups
-5. List of Technologies, libraries, or frameworks
-Link to My Site:
-[Frogman](file:///Users/Rush/ga/Hangman-Game/main.html)
+
+[Frogman](http://frogman-thegame.bitballoon.com/)
 Description:
 
   For this project, I chose to make a hangman-style game.
