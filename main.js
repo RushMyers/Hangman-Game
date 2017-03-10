@@ -86,24 +86,24 @@ $(document).ready(function() {
         })
 
 //              when a letter is clicked
-    $(".letter").click(function() {
-        $(this).addClass("alreadyGuessed");
-        theLetter = this.innerHTML;
-        for(var i = 0;i < ourWord.length; i++) {
+            $(".letter").click(function() {
+                $(this).addClass("alreadyGuessed");
+                theLetter = this.innerHTML;
+                for(var i = 0;i < ourWord.length; i++) {
 
-//                    Correct Guess
-            if  (theLetter === ourWord[i]) {
-                  blankSpaces[i] = theLetter;
-                  $('.answer').text(blankSpaces.join(''));
+        //                    Correct Guess
+                    if  (theLetter === ourWord[i]) {
+                          blankSpaces[i] = theLetter;
+                          $('.answer').text(blankSpaces.join(''));
 
-//                    Win Game
-                  if (blankSpaces.indexOf("_") === -1) {
-                      alert('Congratulations! You Won!!!');
-                      //resetGame();
-                      addWonGame();
-                      }
-            }
-        }
+        //                    Win Game
+                          if (blankSpaces.indexOf("_") === -1) {
+                              alert('Congratulations! You Won!!!');
+                              //resetGame();
+                              addWonGame();
+                              }
+                    }
+                }
 
 //                    Wrong Guess
             if (!(ourWord.indexOf(theLetter) > -1)) {

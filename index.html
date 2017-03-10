@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>My Game</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="main.js" ></script>
+</head>
+<body>
+      <div class="alphabet">
+          <div class="letter">a</div>
+          <div class="letter">b</div>
+          <div class="letter">c</div>
+          <div class="letter">d</div>
+          <div class="letter">e</div>
+          <div class="letter">f</div>
+          <div class="letter">g</div>
+          <div class="letter">h</div>
+          <div class="letter">i</div>
+       </div>
+      <div class="alphabet">
+          <div class="letter">j</div>
+          <div class="letter">k</div>
+          <div class="letter">l</div>
+          <div class="letter">m</div>
+          <div class="letter">n</div>
+          <div class="letter">o</div>
+          <div class="letter">p</div>
+
+          <div class="letter">q</div>
+          <div class="letter">r</div>
+      </div>
+      <div class="alphabet">
+          <div class="letter">s</div>
+          <div class="letter">t</div>
+          <div class="letter">u</div>
+          <div class="letter">v</div>
+          <div class="letter">w</div>
+          <div class="letter">x</div>
+          <div class="letter">y</div>
+          <div class="letter">z</div>
+      </div>
+      <header class="heading">Frogman</header>
+      <div class="gameInfo">
+          <h2>Games Won: <span id='gamesWonCounter'>0</span></h2>
+          <h2>Games Lost: <span id='gamesLostCounter'>0</span></h2>
+          <h3>Guesses Left: <span id='guessesLeftCounter'>6</span></h3>
+          <button id="startGame">New Game</button>
+      </div>
+      <p class="gameRules">Welcome to my game. How to play:
+        This game works just like hangman, except you want
+        to guess the word before the egg becomes a frog.
+        With each wrong guess, the frog will morph.  I will
+        give you a "free" wrong guess as a heads start before the frog
+        starts changing.  Click "New Game" to start.
+      </p>
+
+      <div class="frogHolder">
+          <img src="pictures/frogOne.gif" class="first">
+          <img src="pictures/frogTwo.gif" class="second frog hide">
+          <img src="pictures/frogThree.gif" class="third frog hide">
+          <img src="pictures/frogFour.gif" class="fourth frog hide">
+          <img src="pictures/frogFive.gif" class="fifth frog hide">
+          <img src="pictures/frogSix.gif" class="sixth frog hide">
+          <p class="answer"></p>
+      </div>
+</body>
+</html>
