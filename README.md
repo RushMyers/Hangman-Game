@@ -38,10 +38,10 @@ Features:
   how many wrong guesses they have left before they lose the game
 
 Wireframe:
-[wireframe1](http://imgur.com/vCZkBk3)
-[wireframe2](http://imgur.com/mSN1Mmj)
-[wireframe3](http://imgur.com/mW8taSX)
-[wireframe4](http://imgur.com/EQV3HYx)
+![wireframe1](http://i.imgur.com/vCZkBk3.jpg)
+![wireframe2](http://i.imgur.com/mSN1Mmj.jpg)
+![wireframe3](http://i.imgur.com/mW8taSX.jpg)
+![wireframe4](http://i.imgur.com/EQV3HYx.jpg)
 
 Trello board:
 
