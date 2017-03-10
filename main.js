@@ -1,4 +1,4 @@
-  $(document).ready(function() {
+$(document).ready(function() {
 
     var wordsToChooseFrom = ["bologna", "cheese", "sandwich", "pizza", "barbeque"];
     var randomNumber = 0;
@@ -22,6 +22,35 @@
         guessesLeft-- ;
         $("#guessesLeftCounter").html(guessesLeft);
     }
+
+    var hideAllFrogs = function() {
+        $("img").addClass('hide');
+    }
+    var startingFrog = function() {
+        $(".frog").addClass('hide');
+    }
+
+    var changeFrog = function() {
+      if (wrongGuesses.length === 1) {
+        $('.first').removeClass("hide");
+      }
+       else if (wrongGuesses.length === 2) {
+            $('.second').removeClass("hide");
+          }
+            else if (wrongGuesses.length === 3) {
+              $('.third').removeClass("hide");
+            }
+              else if (wrongGuesses.length ===4) {
+                $('.fourth').removeClass("hide");
+              }
+                else if (wrongGuesses.length === 5) {
+                  $('.fifth').removeClass("hide");
+                }
+                  else if (wrongGuesses.length === 6) {
+                    $('.sixth').removeClass("hide");
+                  }
+      }
+
 
     var resetGame = function() {
           while(blankSpaces.length > 0) {
@@ -48,6 +77,7 @@
             }
             $(".answer").append(blankSpaces);
             alert(chosenWord);
+            startingFrog();
           }
 //                  Click New Game
         $("#startGame").click(function() {
@@ -85,11 +115,14 @@
                       }
             }
         }
+
 //                    Wrong Guess
             if (!(ourWord.indexOf(theLetter) > -1)) {
                   wrongGuesses.push('wrong');
                   console.log(wrongGuesses);
                   subtractGuess();
+                  hideAllFrogs();
+                  changeFrog();
 
 //                     Lose Game
                   if (wrongGuesses.length === 6) {

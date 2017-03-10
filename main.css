@@ -1,5 +1,8 @@
 body {
   font-family: Helvetica Neue;
+  background-image: url("http://orig05.deviantart.net/38fa/f/2015/231/b/f/_kisekae__transparent_water_background_by_tshsuperstars-d96do3m.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .alphabet {
   display: flex;
@@ -20,6 +23,7 @@ body {
   background-color: lightblue;
   border-radius: 4px;
   margin: 2px;
+  border: 1px solid black;
  }
 
 .alreadyGuessed {
@@ -32,19 +36,29 @@ body {
   width: 50%;
   text-align: center;
   }
+
 .gameInfo {
   display: inline-block;
   float:right;
   padding-right: 15px;
  }
- .imagesw {
+ .gameRules {
+  display:block;
+  margin: auto;
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+ }
+ .frogHolder {
   display: block;
   width: 50%;
   text-align: center;
   margin: auto;
   }
 img {
-    width: 150px;
+    margin-top: 25px;
+    width: 300px;
+    border: 2px solid black;
      }
 .startGame {
   position: static;
@@ -55,8 +69,14 @@ img {
 .answer {
   font-size: 75px;
   letter-spacing:20px;
+  margin: auto;
+  width: 50%;
  }
+ #circle { width: 120px; height: 120px; background: #7fee1d; -moz-border-radius: 60px; -webkit-border-radius: 60px; border-radius: 60px; }
 
+.hide {
+display: none;
+ }
  /*h1{
   font-size: 180px;
   border: 4px solid black;
