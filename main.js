@@ -1,4 +1,4 @@
-$(document).ready(function() {
+  $(document).ready(function() {
 
     var wordsToChooseFrom = ["bologna", "cheese", "sandwich", "pizza", "barbeque"];
     var randomNumber = 0;
@@ -84,6 +84,4 @@ $(document).ready(function() {
             }
     });
 });
-
-
 
