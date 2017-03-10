@@ -42,6 +42,10 @@ Wireframe:
 ![wireframe3](http://imgur.com/mW8taSX)
 ![wireframe4](http://imgur.com/EQV3HYx)
 
+Trello board:
+
+[trello link](https://trello.com/b/PjMTa9L4/wdi-project-one)
+
 Future Development:
 -fix bugs: prevent user from being able to click a ltter that they've
           already guessed.
