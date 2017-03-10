@@ -28,7 +28,7 @@ body {
 .heading {
   margin: auto;
   display: block;
-  font-size: 42px;
+  font-size: 50px;
   width: 50%;
   text-align: center;
   }
@@ -43,15 +43,14 @@ body {
   text-align: center;
   margin: auto;
   }
-  img {
-    width: 50%;
+img {
+    width: 150px;
      }
 .startGame {
-  position: absolute;
+  position: static;
   display: inline-block;
-  margin: 20px, 0px -100px 500px;
-  right: 500px;
-
+  margin: auto;
+  right: 600px;
 }
 .answer {
   font-size: 75px;
