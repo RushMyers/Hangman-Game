@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var wordsToChooseFrom = ["bologna", "cheese", "sandwich", "pizza", "barbeque"];
+    var wordsToChooseFrom = ["amphibian", "ribbit", "kermit", "spawn", "pond", "hopping", "tadpole", "lilypad", "toad", "green", "tongue"];
     var randomNumber = 0;
     var chosenWord = '';
     var ourWord = [];
@@ -76,7 +76,7 @@ $(document).ready(function() {
             blankSpaces[i] = "_";
             }
             $(".answer").append(blankSpaces);
-            alert(chosenWord);
+            //alert(chosenWord);
             startingFrog();
           }
 //                  Click New Game
@@ -84,17 +84,6 @@ $(document).ready(function() {
             resetGame();
             gameStart();
         })
-    // $("#startGame").click(function() {
-    //     //resetGame();
-    //     randomNumber = Math.floor(Math.random()*wordsToChooseFrom.length);
-    //     chosenWord = wordsToChooseFrom[randomNumber];
-    //     for(var i =0; i < chosenWord.length; i++) {
-    //     ourWord.push(chosenWord[i]);
-    //     blankSpaces[i] = "_";
-    //     }
-    //     $(".answer").append(blankSpaces);
-    //     alert(chosenWord);
-    // })
 
 //              when a letter is clicked
     $(".letter").click(function() {
